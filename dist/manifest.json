@@ -1,0 +1,27 @@
+{
+    "name": "cloudLog",
+    "version": "1.0.0",
+    "description": "cloudLog Extension",
+    "minimum_chrome_version": "46",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://app.crowdlog.com/timesheet/"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "declarativeContent",
+        "storage"
+    ],
+    "browser_action": {
+        "default_title": "開いてるタブの数を表示する",
+        "default_popup": "popup.html"
+    }
+}
